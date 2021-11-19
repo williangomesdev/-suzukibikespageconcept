@@ -191,3 +191,129 @@ ul.sci li a:hover {
   font-style: italic;
 }
 /* Slidaer content */
+
+/*Responsive*/
+@media (max-width: 991px) {
+  .main {
+    padding: 4rem;
+  }
+
+  header,
+  .footer {
+    padding: 2rem 4rem;
+  }
+
+  .slider {
+    position: relative;
+    width: 100%;
+    height: 18rem;
+  }
+
+  .slider .slides {
+    position: absolute;
+    top: 50%;
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .slider .slides h2 {
+    font-size: 4rem;
+  }
+
+  .slider .slides h2,
+  .slider .slides h2:last-child {
+    text-align: center;
+  }
+
+  .bike {
+    max-width: 100%;
+    margin-top:3rem;
+  }
+
+  .footer {
+    position: relative;
+    margin-top: 5rem;
+    flex-direction: column-reverse;
+    padding: 0 4rem;
+  }
+
+  .sci {
+    margin-top: 4rem;
+  }
+  .content h2 {
+    font-size: 3rem;
+  }
+
+  .toggle {
+    position: relative;
+    width: 3.2rem;
+    height: 4rem;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 100;
+  }
+
+  .toogle.active {
+    position: fixed;
+    top: 3rem;
+    right: 4rem;
+  }
+
+  .toggle::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.2rem;
+    background: var(--white);
+    transform: translateY(-1rem);
+    transition: 0.25s;
+    box-shadow: 0 1rem 0 var(--white);
+  }
+
+  .toggle.active::before {
+    transform: translateY(0) rotate(45deg);
+    box-shadow: 0 0 0 var(--white);
+  }
+
+  .toggle::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.2rem;
+    background: var(--white);
+    transform: translateY(1rem);
+    transition: 0.25s;
+  }
+
+  .toggle.active::after {
+    transform: translateY(0) rotate(-45deg);
+  }
+  .navigation {
+    display: none;
+  }
+
+  .navigation.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    z-index: 99;
+    background: var(--black);
+  }
+
+  .navigation li a {
+    font-size: 2.4rem;
+    margin: 1rem  0;
+    display: inline-block;
+
+  }
+}
