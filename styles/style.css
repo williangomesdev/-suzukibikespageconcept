@@ -157,7 +157,7 @@ ul.sci li a:hover {
 /* Slidaer content */
 .slider .slides {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 0;
   transform: translateY(-50%);
   z-index: 10;
@@ -172,6 +172,7 @@ ul.sci li a:hover {
 
 .slider .slides.active {
   opacity: 1;
+  top: 50%;
 }
 
 .slider .slides h2 {
